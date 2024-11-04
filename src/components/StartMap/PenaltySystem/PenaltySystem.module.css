@@ -1,62 +1,63 @@
 .container {
-    max-width: 480px;
-    width: 100%;
-    margin: 0 auto;
-    font: 700 14px 'Noto Sans KR', -apple-system, Roboto, Helvetica, sans-serif;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  
-  .banner {
-    aspect-ratio: 0.72;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-  }
-  
-  .content {
-    background: linear-gradient(180deg, #87ceeb -7.29%, #f3f4f6 100%);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding: 99px 35px;
-  }
-  
-  .title {
-    color: #333;
-    font-size: 20px;
-  }
-  
-  .description {
-    color: #000;
-    font-weight: 400;
-    line-height: 20px;
-    margin-top: 7px;
-    text-align: left;
-  }
-  
-  .nextButton {
-    z-index: 10;
-    border-radius: 20px;
-    background-color: rgba(176, 224, 230, 0.9);
-    align-self: stretch;
-    color: rgba(56, 56, 56, 0.9);
-    white-space: nowrap;
-    margin: 17px 0 -22px;
-    padding: 12px 200px;
-    border: none;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
-  
-  .nextButton:hover {
-    opacity: 0.9;
-  }
-  
-  .nextButton:focus {
-    outline: 2px solid #333;
-    outline-offset: 2px;
-  }
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  font: 700 14px "Noto Sans KR", -apple-system, Roboto, Helvetica, sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.banner {
+  aspect-ratio: 0.72;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+
+.content {
+  background: linear-gradient(180deg, #87ceeb -7.29%, #f3f4f6 100%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 99px 35px;
+}
+
+.title {
+  color: #333;
+  font-size: 20px;
+}
+
+.description {
+  color: #000;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 7px;
+  text-align: left;
+}
+
+.nextButton {
+  z-index: 10;
+  border-radius: 20px;
+  background-color: rgba(176, 224, 230, 0.9);
+  align-self: stretch;
+  color: rgba(56, 56, 56, 0.9);
+  white-space: nowrap;
+  margin: 17px 0 -22px;
+  padding: 12px 200px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.nextButton:hover {
+  opacity: 0.9;
+}
+
+.nextButton:focus {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
+/*  */
