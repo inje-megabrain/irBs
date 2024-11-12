@@ -100,6 +100,28 @@ export const MainPage: React.FC = () => {
 
       <section className={styles.noticeSection}>
         <h2 className={styles.noticeTitle}>공지사항</h2>
+        {/* ----------------------------------------------------------------- */}
+        {/* 목차 */}
+        <ul className={styles.noticeList}>
+          <a className={styles.noUnderline} href="https://www.inje.ac.kr/kor/campus-life/welfare-0101.asp">
+            <li>📅2024년도 2학기 통학버스 운행안내</li>
+          </a>
+
+          <a className={styles.noUnderline} href="https://www.inje.ac.kr/kor/campus-life/welfare-0102-1.asp">
+            <li>🕒통학버스 운행 시간표</li>
+          </a>
+
+          <a className={styles.noUnderline} href="https://www.inje.ac.kr/kor/campus-life/welfare-0103.asp">  
+            <li>📍통합버스 승차장소 안내</li>
+          </a>
+
+          <a className={styles.noUnderline} href="https://www.inje.ac.kr/kor/campus-life/welfare-0104.asp">  
+            <li>🔔시간예약제 관련 안내</li>
+          </a>
+
+        </ul>
+        {/* ----------------------------------------------------------------- */}
+        
         <hr className={styles.noticeDivider} />
         <div className={styles.noticeFooter}>
           <span className={styles.noticeText}>전체공지 보기</span>

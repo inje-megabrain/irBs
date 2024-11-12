@@ -236,16 +236,33 @@
   font-weight: 600;
   margin-left: 10px;
 }
-
 .noticeDivider {
   width: 97%;
   max-width: 100%;
   height: 1px;
-  margin: 237px auto 0;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  
+  margin: auto 0;
+  border: 1px solid rgba(0, 0, 0, 0.4); 
+}
+/* 공지사항 내용 */
+.noticeList {
+  /* list-style-type: none; */
+  padding: 0;
+  margin: 20px 0 13px 5px;
+  text-align: left;
+  margin: 20px;
 }
 
+.noticeList li {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.565);
+  margin-bottom: 20px;
+}
+
+/* 태그 밑줄 옵션 */
+.noUnderline {
+  text-decoration: none;
+}
+/* ---------------------------------------------------------------------- */
 .noticeFooter {
   align-self: end;
   display: flex;
