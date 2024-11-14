@@ -5,8 +5,7 @@
   .onboardingWrapper {
     background-color: #fff;
     display: flex;
-    max-width: 480px;
-    width: 100%;
+    width: 480px;
     flex-direction: column;
     overflow: hidden;
     margin: 0 auto;
@@ -23,24 +22,26 @@
   .contentSection {
     background: linear-gradient(180deg, #87ceeb -7.29%, #f3f4f6 100%);
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     flex-direction: column;
     align-items: start;
-    padding: 98px 35px;
+    padding: 90px 35px;
+    margin: 0;
   }
   
   .title {
     color: #333;
-    font-size: 20px;
+    font-size: 22px;
     text-align:left;
   }
   
   .description {
     color: #000;
     font-weight: 400;
-    line-height: 20px;
-    margin-top: 7px;
+    line-height: 30px;
+    margin-top: 20px;
     text-align:left;
+    font-size: 16px;
   }
   
   .nextButton {
@@ -50,8 +51,8 @@
     align-self: stretch;
     color: rgba(56, 56, 56, 0.9);
     white-space: nowrap;
-    margin: 17px 0 -22px;
-    padding: 12px 200px;
+    margin: 17px 0 ;
+    padding: 12px 170px;
     border: none;
     cursor: pointer;
     transition: opacity 0.2s;
