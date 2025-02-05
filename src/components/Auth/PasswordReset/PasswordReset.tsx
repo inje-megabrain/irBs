@@ -14,6 +14,18 @@ const PasswordReset: React.FC = () => {
     ResetData.append("id", idx);
     ResetData.append("name", name);
 
+    if(idx == '')
+    {
+      alert("아이디를 입력해주세요")
+      return 0;
+    }
+
+    if(name == '')
+    {
+      alert("이름을 입력해주세요")
+      return 0;
+    }
+
     try {
       const response = await axios.post("/findPassProc.php", ResetData, {
         headers: {
@@ -44,7 +56,7 @@ const PasswordReset: React.FC = () => {
       <h1 className={styles.title}>비밀번호 찾기</h1>
       <form>
         <Input
-          type="number"
+          type="text"
           className={styles.inputField}
           value={idx}
           label="아이디 (학번/사번)"

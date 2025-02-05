@@ -100,7 +100,7 @@ const UserProfile: React.FC = () => {
 
     if (!card) 
     {
-      alert('빈 곳을 입력해주세요.');
+      alert('카드번호를 입력해주세요.');
       return;
     }
     
@@ -137,14 +137,17 @@ const UserProfile: React.FC = () => {
 
   const handlePasswordReset = async (event: React.FormEvent) => {
     event.preventDefault();
-    if (newpass !== pass) {
-      alert('비밀번호가 일치하지 않습니다. 다시 확인해 주세요.');
-      return;
-    }
+
     if (!newpass || !pass) {
       alert('변경할 비밀번호를 입력해주세요.');
       return;
     }
+
+    if (newpass !== pass) {
+      alert('비밀번호가 일치하지 않습니다. 다시 확인해 주세요.');
+      return;
+    }
+
     const resetData = new URLSearchParams();
     resetData.append('id', idx);
     resetData.append('pass', pass);
@@ -188,7 +191,6 @@ const UserProfile: React.FC = () => {
         title="카드번호 변경"
         inputs={cardInputs.cardNumber}
         buttonText="카드번호 변경"
-        buttonDisabled={!isCardValid(card)}
         onSubmit={handleCardNumberChange}
       />
 
@@ -196,7 +198,6 @@ const UserProfile: React.FC = () => {
         title="비밀번호 변경"
         inputs={passwordInputs.password}
         buttonText="비밀번호 변경"
-        buttonDisabled={!newpass || !pass}
         onSubmit={handlePasswordReset}
       />
       

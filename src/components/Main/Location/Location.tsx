@@ -330,7 +330,7 @@ export const ReservationStatus: FC = () => {
           />
         ))
       ) : (
-        <p>예약 정보가 없습니다.</p>
+        <p>조회가능한 버스가 없습니다.</p>
       )}
     </main>
   );

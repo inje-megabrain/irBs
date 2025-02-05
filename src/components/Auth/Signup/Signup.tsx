@@ -30,6 +30,20 @@ const Signup: React.FC = () => {
 
     setLoading(true);
 
+    if(idx == '')
+    {
+      alert("학번/사번을 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
+    if(birth == '')
+    {
+      alert("생년월일을 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
     const timeoutId = setTimeout(() => {
       alert("응답이 평소와 같지 않네요. 잠시만 기다려 주세요.");
     }, 300);
@@ -38,6 +52,7 @@ const Signup: React.FC = () => {
     loginData.append("idx", idx);
     loginData.append("birth", birth);
     loginData.append("check", check);
+
 
     try {
       const response = await axios.post(
@@ -77,9 +92,30 @@ const Signup: React.FC = () => {
   ) => {
     event.preventDefault();
 
+
     if (!isFirstCheck) {
       alert("학번과 생년월일을 먼저 인증해주세요.");
       return;
+    }
+
+    if(idx == '')
+    {
+      alert("학번/사번을 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
+    if(birth == '')
+    {
+      alert("생년월일을 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
+    if(phone == "") {
+      alert("휴대폰번호를 입력해주세요");
+      setLoading(false);
+      return 0;
     }
 
     if (phone.length !== 11) {
@@ -148,6 +184,33 @@ const Signup: React.FC = () => {
       return;
     }
 
+    if(idx == '')
+    {
+      alert("학번/사번을 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
+    if(birth == '')
+    {
+      alert("생년월일을 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
+    if(phone == "") {
+      alert("휴대폰번호를 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
+    if(certCode == "")
+    {
+      alert("인증번호를 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
     if (certCode.length !== 6) {
       alert("인증번호는 6자리여야 합니다. 다시 입력해주세요.");
       return;
@@ -213,6 +276,40 @@ const Signup: React.FC = () => {
     if (!isFirstCheck && !isPhone && !isPhoneCert) {
       alert("학번, 생년월일, 핸드폰번호 인증을 모두 완료해주세요.");
       return;
+    }
+
+    if(idx == '')
+    {
+      alert("학번/사번을 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
+    if(birth == '')
+    {
+      alert("생년월일을 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
+    if(phone == "") {
+      alert("휴대폰번호를 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
+    if(certCode == "")
+    {
+      alert("인증번호를 입력해주세요");
+      setLoading(false);
+      return 0;
+    }
+
+    if(card == "")
+    {
+      alert("카드번호를 입력해주세요");
+      setLoading(false);
+      return 0;
     }
 
     if (loading) {

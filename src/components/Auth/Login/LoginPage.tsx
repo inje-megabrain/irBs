@@ -34,6 +34,18 @@ const LoginPage: React.FC = () => {
   ) => {
     event.preventDefault();
 
+    if(userId == '')
+    {
+      alert("아이디를 입력해주세요.");
+      return;
+    }
+
+    if(password == '')
+    {
+      alert("비밀번호를 입력해주세요.");
+      return;
+    }
+    
     const loginData = new URLSearchParams();
     loginData.append("id", userId);
     loginData.append("password", password);
