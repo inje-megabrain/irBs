@@ -41,6 +41,7 @@ const NotificationList = () => {
           onclick,
           isExpanded: false, // 초기 상태는 닫힌 상태로 설정
         });
+        
       });
 
       console.log("최종 공지사항 데이터:", extractedNotifications);
@@ -66,7 +67,7 @@ const NotificationList = () => {
   };
 
   // description 내 URL을 링크로 변환하는 함수
-  const addDownloadLinkToDescription = (description: string) => {
+  /* const addDownloadLinkToDescription = (description: string) => {
     const downloadText = "첨부파일 다운로드";
     const regex = /첨부파일 다운로드/;
 
@@ -77,7 +78,33 @@ const NotificationList = () => {
     }
     
     return description;
+  }; */
+  
+
+  /* useEffect(() => {
+    window.fnCheckCnt = (id) => {
+      console.log(`fnCheckCnt(${id}) 실행됨!`);
+      const addDownloadLink = (onclick: string | null) => {
+        if (onclick) {
+          return `<a href="#" onclick="fnCheckCnt(353)" class="${styles.downloadButton}"></a>`;
+        }
+        return "";
+      };
+    };
+  }, []); */
+
+  const extractFileId = (onclick: string | null) => {
+    if (!onclick) return null;
+    const match = onclick.match(/\d+/); // 숫자만 추출
+    return match ? match[0] : null;
   };
+
+  const handleDownload = (fileId: string) => {
+    const fileUrl = `https://bus.inje.ac.kr/inc/download.php?fileName=${fileId}`;
+    console.log(fileId);
+    window.open(fileUrl, "_blank");
+  };
+  
 
   return (
     <div className={styles.container}>
@@ -113,10 +140,25 @@ const NotificationList = () => {
               <div
                 className={styles.description}
                 style={{ display: notification.isExpanded ? 'block' : 'none' }}
-                dangerouslySetInnerHTML={{
-                  __html: addDownloadLinkToDescription(notification.description)
-                }}
-              />
+                >
+                  <div>
+                  {notification.description}
+                  </div>
+                  <div
+                    className={styles.downloadButton}
+                    onClick={() => {
+                      const fileId = extractFileId(notification.onclick);
+                      if (fileId) {
+                        handleDownload(fileId);
+                      } else {
+                        console.error("파일 ID를 찾을 수 없습니다.");
+                      }
+                    }}
+                  >
+                    첨부파일 다운로드
+                  </div>
+
+              </div>
             </div>
           ))
         ) : (
