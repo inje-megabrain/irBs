@@ -1,8 +1,7 @@
 name: parsing busschedule data
  
 on:
-  schedule:
-      - cron: "0 15 * * *" 
+  workflow_dispatch:
 
 jobs:
   update-busschedule:
